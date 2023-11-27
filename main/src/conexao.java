@@ -15,7 +15,7 @@ public class conexao {
             Class.forName(driver);
             return DriverManager.getConnection(servidor,usuario,senha);
         }catch(Exception e){
-           System.out.println("agora deu o karaio memo deu a porra "+e);
+           System.out.println("Erro ao abrir a conexão com o banco de dados: "+e);
            return null; 
         }
     }
@@ -25,7 +25,7 @@ public class conexao {
             try{
                 conn.close();
             }catch(Exception e){
-                System.out.print("fudeu "+e);
+                System.out.print("Erro ao fechar a conexão: "+e);
             }
         }  
     }
@@ -36,7 +36,7 @@ public class conexao {
             try{
                 stat.close();
             } catch(Exception e){
-                System.out.println("deu ruim "+e);
+                System.out.println("Erro ao fechar a conexão: "+e);
             }
         }
     }
@@ -47,7 +47,7 @@ public class conexao {
             try{
                 res.close();
             } catch (Exception e){
-                System.out.println("me ferrei amigos e amigas "+e);
+                System.out.println("Erro ao fechar a conexão: "+e);
             }
         }
     }
